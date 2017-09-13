@@ -1,1 +1,1 @@
-Js.log "abstract factory goes here!";
+Js.log "abstract factory asds here!";

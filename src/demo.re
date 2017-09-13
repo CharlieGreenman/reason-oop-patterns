@@ -1,1 +1,1 @@
-Js.log "Hello, BuckleScript and Reason!";
+Js.log "Hello, BuleScript and Reason!";
