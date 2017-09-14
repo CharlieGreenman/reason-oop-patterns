@@ -6,7 +6,10 @@ let b: int = 2;
 
 let c: int = a + b;
 
-let greetMore = fun name => {
-  let part1 = "Hello";
-  part1 ^ " " ^ name
+class stack_of_ints = {
+  as self;
+  val mutable the_list: list int = []; /* instance variable */
+  pub push x =>
+    /* push method */
+    the_list = [x, ...the_list];
 };
