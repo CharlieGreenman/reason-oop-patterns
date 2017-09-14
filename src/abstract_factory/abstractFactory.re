@@ -1,1 +1,1 @@
-Js.log "abstract factory asds here!";
+class maze = {};
