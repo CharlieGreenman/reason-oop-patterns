@@ -1,6 +1,7 @@
 
 class abstractProductA = {
-  let methodA = fun methodA => "name";
+  as self;
+  pub methodA => "name";
 };
 
-JS.log (abstractProductA.methodA());
+abstractProductA#methodA;
