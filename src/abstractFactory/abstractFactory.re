@@ -1,9 +1,9 @@
-type abstractProductA = {
-  methodA: string => string
+class virtual virtualProductA = {
+  pub virtual methodA: string;
 };
 
-
 class abstractProductA = {
+  inherit virtualProductA;
   pub methodA => "name";
 };
 
