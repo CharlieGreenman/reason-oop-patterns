@@ -6,14 +6,24 @@ class virtual virtualProductB = {
   pub virtual methodB: int;
 };
 
-class abstractProductA = {
+class productA1 = {
   inherit virtualProductA;
-  pub methodA => "name";
+  pub methodA => "This is methodA of ProductA1";
 };
 
-class abstractProductB = {
+class productB1 = {
   inherit virtualProductB;
-  pub methodA => 2;
+  pub methodB => 1;
+};
+
+class productA2 = {
+  inherit virtualProductA;
+  pub methodA => "This is methodA of ProductA2";
+};
+
+class productB1 = {
+  inherit virtualProductB;
+  pub methodB => 2;
 };
 
 Js.log (new abstractProductA)#methodA;
