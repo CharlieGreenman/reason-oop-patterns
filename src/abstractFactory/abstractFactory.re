@@ -33,6 +33,5 @@ class productB2 = {
 
 class virtual concreteFactory1 = {
   inherit abstractFactory;
+  pub createProductA => (new productA1);
 };
-
-Js.log (new abstractProductA)#methodA;
