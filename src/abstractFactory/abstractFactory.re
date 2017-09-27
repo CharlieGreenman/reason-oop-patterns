@@ -38,3 +38,6 @@ class productB2 = {
 class virtual concreteFactory1 = {
   pub createProductA => (new productA1);
 };
+
+let f (p: abstractProductA) => Js.log p#methodA;
+f (new productA1);
