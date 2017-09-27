@@ -1,3 +1,12 @@
+type abstractProductA = {
+  methodA: string
+};
+
+type abstractProductB = {
+  methodB: int
+};
+
+
 class virtual virtualProductA = {
   pub virtual methodA: string;
 };
