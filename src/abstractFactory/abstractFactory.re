@@ -11,14 +11,6 @@ type abstractFactory = {.
   createProductB: abstractProductB
 };
 
-class virtual virtualProductA = {
-  pub virtual methodA: string;
-};
-
-class virtual virtualProductB = {
-  pub virtual methodB: int;
-};
-
 class productA1 = {
   pub methodA => "This is methodA of ProductA1";
 };
@@ -37,6 +29,12 @@ class productB2 = {
 
 class virtual concreteFactory1 = {
   pub createProductA => (new productA1);
+  pub createProductB => (new productB1);
+};
+
+class virtual concreteFactory2 = {
+  pub createProductA => (new productA2);
+  pub createProductB => (new productB2);
 };
 
 let f (p: abstractProductA) => Js.log p#methodA;
