@@ -27,15 +27,16 @@ class productB2 = {
   pub methodB => 2;
 };
 
-class virtual concreteFactory1 = {
+class concreteFactory1 = {
   pub createProductA => (new productA1);
   pub createProductB => (new productB1);
 };
 
-class virtual concreteFactory2 = {
+class concreteFactory2 = {
   pub createProductA => (new productA2);
   pub createProductB => (new productB2);
 };
 
+Js.log (new concreteFactory2#createProductA);
 let f (p: abstractProductA) => Js.log p#methodA;
 f (new productA1);
