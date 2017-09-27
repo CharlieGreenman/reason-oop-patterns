@@ -6,6 +6,10 @@ type abstractProductB = {.
   methodB: int
 };
 
+type abstractFactory = {.
+  createProductA: abstractProductA,
+  createProductB: abstractProductB
+};
 
 class virtual virtualProductA = {
   pub virtual methodA: string;
