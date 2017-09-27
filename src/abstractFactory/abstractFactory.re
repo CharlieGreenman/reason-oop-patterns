@@ -1,8 +1,8 @@
-type abstractProductA = {
+type abstractProductA = {.
   methodA: string
 };
 
-type abstractProductB = {
+type abstractProductB = {.
   methodB: int
 };
 
