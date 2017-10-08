@@ -6,9 +6,9 @@ type abstractProductB = {.
   methodB: int
 };
 
-type abstractFactory = {.
-  createProductA: abstractProductA,
-  createProductB: abstractProductB
+class virtual abstractFactory = {
+  pub virtual createProductA: abstractProductA;
+  pub virtual createProductB: abstractProductB;
 };
 
 class productA1 = {
@@ -28,11 +28,13 @@ class productB2 = {
 };
 
 class concreteFactory1 = {
+  inherit abstractFactory;
   pub createProductA => (new productA1);
   pub createProductB => (new productB1);
 };
 
 class concreteFactory2 = {
+  inherit abstractFactory;
   pub createProductA => (new productA2);
   pub createProductB => (new productB2);
 };
