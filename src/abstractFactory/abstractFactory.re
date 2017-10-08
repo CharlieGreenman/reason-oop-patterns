@@ -39,6 +39,10 @@ class concreteFactory2 = {
   pub createProductB => (new productB2);
 };
 
+class testFactory factory => {
+  as _;
+};
+
 let g = new concreteFactory2#createProductA;
 Js.log (g#methodA);
 let f (p: abstractProductA) => Js.log p#methodA;
