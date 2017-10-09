@@ -40,6 +40,7 @@ class concreteFactory2 = {
 };
 
 class testFactory factory => {
+  let factory = factory;
   as _;
   pub createProductA => Js.log factory#createProductA;
 };
