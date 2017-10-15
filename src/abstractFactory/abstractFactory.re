@@ -44,5 +44,5 @@ class testFactory (factory: abstractFactory) => {
   pub createProductA => factory#createProductA;
 };
 
-let g = new concreteFactory2#createProductA;
-Js.log (g#methodA);
+let g = new testFactory(new concreteFactory1);
+Js.log (g#createProductA#methodA);
