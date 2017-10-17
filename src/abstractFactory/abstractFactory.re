@@ -42,6 +42,7 @@ class concreteFactory2 = {
 class testFactory (factory: abstractFactory) => {
   as _;
   pub createProductA => factory#createProductA;
+  pub createProductB => factory#createProductB;
 };
 
 let g = new testFactory(new concreteFactory1);
