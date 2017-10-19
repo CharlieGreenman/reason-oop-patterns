@@ -43,4 +43,10 @@ class testFactory (factory: abstractFactory) => {
   as _;
   pub createProductA => factory#createProductA;
   pub createProductB => factory#createProductB;
+
+  pub test () => {
+    Js.log createProductA;
+    Js.log createProductB;
+  }
+
 };
