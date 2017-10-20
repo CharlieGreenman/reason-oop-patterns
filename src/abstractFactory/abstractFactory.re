@@ -40,13 +40,12 @@ class concreteFactory2 = {
 };
 
 class testFactory (factory: abstractFactory) => {
-  as _;
+  as self;
   pub createProductA => factory#createProductA;
   pub createProductB => factory#createProductB;
 
   pub test () => {
-    Js.log createProductA;
-    Js.log createProductB;
+    Js.log self#createProductA;
+    Js.log self#createProductB;
   }
-
 };
