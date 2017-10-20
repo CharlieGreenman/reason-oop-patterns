@@ -3,9 +3,15 @@ type abstractProduct = {.
 };
 
 class concreteProductA1 = {
-  pub methodA => "This is methodA of concreteProductA1";
+  pub method => "This is method of ConcreteProductA1";
 };
 
-class concreteProductA2 = {
-  pub methodB  => "This is methodA of concreteProductA2";
+class concreteProductA1 = {
+  pub method  => "This is method of ConcreteProductA1";
 };
+
+class productFactory (prodyctType: string) = {
+  pub method () => {
+
+  }
+}
