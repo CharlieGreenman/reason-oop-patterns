@@ -3,10 +3,12 @@ class virtual abstractProduct = {
 };
 
 class concreteProductA = {
+  inherit abstractProduct;
   pub method => "This is method of ConcreteProductA";
 };
 
 class concreteProductB = {
+  inherit abstractProduct;
   pub method  => "This is method of ConcreteProductB";
 };
 
