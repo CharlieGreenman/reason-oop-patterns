@@ -10,12 +10,11 @@ class concreteProductB = {
   pub method  => "This is method of ConcreteProductA1";
 };
 
-class productFactory (productType: string) => {
-  pub createProduct () => {
-    let message productType => switch productType {
-      | 'A' => (new concreteProductA);
-      | 'B' => (new concreteProductB);
-    };
-    return message;
-  }
+class productFactory (productType: char) => {
+  let message productType => switch productType {
+    | 'A' => (new concreteProductA);
+    | 'B' => (new concreteProductB);
+  };
+
+  pub createProduct => message productType;
 }
