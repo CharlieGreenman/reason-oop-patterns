@@ -1,6 +1,6 @@
 type userBuilderType = {.
   name: string,
-  age: number,
+  age: int,
   phone: string,
   address: string
 };
