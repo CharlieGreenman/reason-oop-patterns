@@ -1,5 +1,5 @@
-type abstractProduct = {.
-  method: string
+class virtual abstractProduct = {
+  pub virtual method: string
 };
 
 class concreteProductA = {
