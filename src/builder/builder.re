@@ -4,3 +4,7 @@ type userBuilderType = {.
   phone: string,
   address: string
 };
+
+class userBuilder = {
+    pub setAge => 11;
+};
