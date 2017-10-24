@@ -6,8 +6,14 @@ type userBuilderType = {
 };
 
 module BuilderPattern = {
-  let setName = fun name => name = name;
-  let getName = name;
+  let builder = {
+    name: "asd",
+    age: 0,
+    phone: "",
+    address: ""
+  };
+  let setName = fun name => builder.name = name;
+  let getName = builder.name;
 };
 
 BuilderPattern.setName("Charles");
