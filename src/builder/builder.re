@@ -6,8 +6,8 @@ type userBuilderType = {
 };
 
 module BuilderPattern = {
-  let builder = {
-    name: "asd",
+  let builder () => {
+    name: "",
     age: 0,
     phone: "",
     address: ""
