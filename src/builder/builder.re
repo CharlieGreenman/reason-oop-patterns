@@ -1,7 +1,7 @@
 type userBuilderType = {
   mutable name: string,
-  mutable age: string,
-  mutable phone: int,
+  mutable age: int,
+  mutable phone: string,
   mutable address: string
 };
 
@@ -13,7 +13,13 @@ module type UserBuilderType = {
 };
 
 module BuilderPattern = fun(Builder: UserBuilderType) => {
-  let builder = {};
+  let builder = {
+    name: "",
+    age: 0,
+    phone: "",
+    address: ""
+  };
+
   let setName name => builder.name = Builder.name;
   let getName () => builder.name;
 
