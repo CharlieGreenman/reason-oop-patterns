@@ -34,8 +34,8 @@ module BuilderPattern = fun(Builder: UserBuilderType) => {
 };
 
 module SetOfIntPairs = BuilderPattern({
-  let name = "asd";
   let age = 12;
+  let name = "asd";
   let phone = "(123) 456-9876";
   let address =  "770";
 });
