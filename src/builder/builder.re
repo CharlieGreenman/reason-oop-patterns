@@ -14,24 +14,33 @@ module type UserBuilderType = {
 
 module BuilderPattern = fun(Builder: UserBuilderType) => {
   let builder = {
-    name: "",
+    name: "asd",
     age: 0,
     phone: "",
     address: ""
   };
 
-  let setName name => builder.name = Builder.name;
+  let setName = builder.name = Builder.name;
   let getName () => builder.name;
 
-  let setAge age => builder.age = Builder.age;
+  let setAge = builder.age = Builder.age;
   let getAge () => builder.age;
 
-  let setPhone phone => builder.phone = Builder.phone;
+  let setPhone = builder.phone = Builder.phone;
   let getPhone () => builder.phone;
 
-  let setAddress address => builder.address = Builder.address;
+  let setAddress = builder.address = Builder.address;
   let getAddress () => builder.address;
 };
 
-BuilderPattern.setName "Charles";
-Js.log(BuilderPattern.getName ());
+module SetOfIntPairs = BuilderPattern({
+  let name = "asd";
+  let age = 12;
+  let phone = "(123) 456-9876";
+  let address =  "770";
+});
+
+Js.log(SetOfIntPairs.getName ());
+Js.log(SetOfIntPairs.getAge ());
+Js.log(SetOfIntPairs.getPhone ());
+Js.log(SetOfIntPairs.getAddress ());
