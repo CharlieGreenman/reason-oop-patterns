@@ -26,14 +26,14 @@ module BuilderPattern = fun(User: User) => {
   let setName = (builder, name) => builder.name = name;
   let getName = (builder) => builder.name;
 
-  let setAge = builder.age = Builder.age;
-  let getAge () => builder.age;
+  let setAge = (builder, age) => builder.age = age;
+  let getAge = (builder) => builder.age;
 
-  let setPhone = builder.phone = Builder.phone;
-  let getPhone () => builder.phone;
+  let setPhone = (builder, phone) => builder.phone = phone;
+  let getPhone = (builder) => builder.phone;
 
-  let setAddress = builder.address = Builder.address;
-  let getAddress () => builder.address;
+  let setAddress = (builder, address) => builder.address = address;
+  let getAddress = (builder) => builder.address;
 };
 
 module SetOfIntPairs = BuilderPattern({
