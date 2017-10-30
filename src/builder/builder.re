@@ -5,7 +5,7 @@ module type User = {
   let phone: string;
   let address: string;
 
-  let create: (~name:string, ~age:int, ~phone:string, ~address:string) => t;
+  /* let create : (~name:string, ~age:int, ~phone:string, ~address:string) => t; */
 };
 
 module type UserBuilder = {
@@ -13,7 +13,7 @@ module type UserBuilder = {
   type user;
 
   let setName: (t,string) => unit;
-  let getName: t => string;;
+  let getName: t => string;
   let setAge: (t, int) => unit;
   let getAge: t => unit;
   let setPhone: (t, string) => unit;
@@ -22,16 +22,9 @@ module type UserBuilder = {
   let getAddress: t => unit;
 };
 
-module BuilderPattern = fun(Builder: UserBuilderType) => {
-  let builder = {
-    name: "asd",
-    age: 0,
-    phone: "",
-    address: ""
-  };
-
-  let setName = builder.name = Builder.name;
-  let getName () => builder.name;
+module BuilderPattern = fun(User: User) => {
+  let setName = (builder, name) => builder.name = name;
+  let getName = (builder) => builder.name;
 
   let setAge = builder.age = Builder.age;
   let getAge () => builder.age;
