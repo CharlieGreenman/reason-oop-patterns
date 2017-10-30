@@ -36,14 +36,11 @@ module BuilderPattern = fun(User: User) => {
   let getAddress = (builder) => builder.address;
 };
 
-module SetOfIntPairs = BuilderPattern({
-  let age = 12;
-  let name = "asd";
-  let phone = "(123) 456-9876";
-  let address =  "770";
-});
+module Director = (User: User, Builder: UserBuilder with type user = User.t) => {
+  let construct = (builder) => {
+    Builder.setName(builder, "Charles");
+    Builder.setAge(builder, 120)
+  };
+};
 
-Js.log(SetOfIntPairs.getName ());
-Js.log(SetOfIntPairs.getAge ());
-Js.log(SetOfIntPairs.getPhone ());
-Js.log(SetOfIntPairs.getAddress ());
+Js.log(Director.getName ());
