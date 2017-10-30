@@ -22,7 +22,14 @@ module type UserBuilder = {
   let getAddress: t => unit;
 };
 
-module BuilderPattern = fun(User: User) => {
+module BuilderPattern = (User: User) => {
+  type t = {
+    mutable name: string,
+    mutable age: int,
+    mutable phone: string,
+    mutable address: string,
+  };
+
   let setName = (builder, name) => builder.name = name;
   let getName = (builder) => builder.name;
 
