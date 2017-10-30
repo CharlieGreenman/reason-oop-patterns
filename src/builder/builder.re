@@ -1,11 +1,14 @@
-type userBuilderType = {
-  mutable name: string,
-  mutable age: int,
-  mutable phone: string,
-  mutable address: string
+module type User = {
+  type t;
+  let name: string,
+  let age: int,
+  let phone: string,
+  let address: string
+
+  let create : (~name:string, ~age:int, ~phone:string, ~colour:address) => t;
 };
 
-module type UserBuilderType = {
+module type UserBuilder = {
   let name: string;
   let age: int;
   let phone: string;
