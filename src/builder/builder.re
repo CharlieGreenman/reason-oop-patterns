@@ -27,7 +27,7 @@ module BuilderPattern = (User: User) => {
     mutable name: string,
     mutable age: int,
     mutable phone: string,
-    mutable address: string,
+    mutable address: string
   };
 
   let setName = (builder, name) => builder.name = name;
@@ -55,10 +55,14 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
 };
 
 module ConcreteUser = {
-  let name = "Charles";
+  let name= "Charles";
   let age = 120;
   let phone = "(123) 456-7890";
   let address = "123 Fake St.";
+  let create = (~name=name, ~age=age, ~phone="(123) 456-7890", ~address="123 Fake St.") => {
+    Js.log ("works");
+  };
+  type t = (int);
 };
 
 module DisplayName = Director(ConcreteUser, BuilderPattern);
