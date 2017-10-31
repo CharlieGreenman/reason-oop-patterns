@@ -61,7 +61,7 @@ module ConcreteUser = {
   let address = "123 Fake St.";
 };
 
-module DisplayName = Director(ConcreteUser);
+module DisplayName = Director(ConcreteUser, BuilderPattern);
 
 
 /* Js.log(BuilderPattern.getName); */
