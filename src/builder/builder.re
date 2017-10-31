@@ -5,7 +5,7 @@ module type User = {
   let phone: string;
   let address: string;
 
-  /* let create : (~name:string, ~age:int, ~phone:string, ~address:string) => t; */
+  let create : (~name:string, ~age:int, ~phone:string, ~address:string) => t;
 };
 
 module type UserBuilder = {
