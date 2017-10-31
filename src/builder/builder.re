@@ -54,14 +54,14 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
   };
 };
 
-let concreteUser = {
+module ConcreteUser = {
   let name = "Charles";
   let age = 120;
   let phone = "(123) 456-7890";
   let address = "123 Fake St.";
 };
 
-module DisplayName = Director(concreteUser);
+module DisplayName = Director(ConcreteUser);
 
 
 /* Js.log(BuilderPattern.getName); */
