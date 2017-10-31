@@ -68,7 +68,9 @@ module ConcreteUser = {
 
 };
 
-module DisplayName = Director(ConcreteUser, BuilderPattern);
+module MyBuilder = BuilderPattern(ConcreteUser);
+
+module DisplayName = Director(ConcreteUser, MyBuilder);
 
 
 /* Js.log(BuilderPattern.getName); */
