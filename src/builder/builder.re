@@ -54,4 +54,12 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
   };
 };
 
-/* Js.log(Builder ({builder: asd})); */
+module ConcreteUser = {
+  let name = "Charles";
+  let age = 120;
+  let phone = "(123) 456-7890";
+  let address = "123 Fake St.";
+};
+
+
+/* Js.log(BuilderPattern.getName); */
