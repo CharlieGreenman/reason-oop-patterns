@@ -41,6 +41,9 @@ module BuilderPattern = (User: User) => {
 
   let setAddress = (builder, address) => builder.address = address;
   let getAddress = (builder) => builder.address;
+
+  User.create(~name=builder.name, ~age=builder.age,
+                ~phone=builder.phone, ~address=builder.address)
 };
 
 module Director = (User: User, Builder: UserBuilder with type user = User.t) => {
@@ -50,4 +53,4 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
   };
 };
 
-Js.log(Director.getName ());
+/* Js.log(Builder ({builder: asd})); */
