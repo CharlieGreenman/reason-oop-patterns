@@ -54,16 +54,18 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
   };
 };
 
-Printf.printf("yellow");
-
 module ConcreteUser = {
   let name:string = "Charles";
   let age:int = 120;
   let phone:string = "(123) 456-7890";
   let address:string = "123 Fake St.";
-  let create = (~name:string, ~age:int, ~phone:string, ~address:string) => {
-    let name = "Charles";
+  type t = {
+    name:string
   };
+  let create = (~name:string, ~age:int, ~phone:string, ~address:string) => {
+    name: "asd"
+  };
+
 };
 
 module DisplayName = Director(ConcreteUser, BuilderPattern);
