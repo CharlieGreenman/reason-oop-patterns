@@ -1,6 +1,6 @@
-type abstractProductA = {. methodA : string};
+type abstractProductA = {. methodA: string};
 
-type abstractProductB = {. methodB : int};
+type abstractProductB = {. methodB: int};
 
 class virtual abstractFactory = {
   pub virtual createProductA: abstractProductA;
@@ -35,12 +35,12 @@ class concreteFactory2 = {
   pub createProductB = new productB2;
 };
 
-class testFactory (factory: abstractFactory) => {
+class testFactory (factory: abstractFactory) = {
   as self;
   pub createProductA = factory#createProductA;
   pub createProductB = factory#createProductB;
-  pub test () => {
-    Js.log self#createProductA#methodA;
-    Js.log self#createProductB#methodB
+  pub test = () => {
+    Js.log(self#createProductA#methodA);
+    Js.log(self#createProductB#methodB)
   };
 };
