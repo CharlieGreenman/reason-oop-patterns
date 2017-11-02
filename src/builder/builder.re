@@ -56,7 +56,9 @@ module BuilderPattern = (User: User) => {
 module Director = (User: User, Builder: UserBuilder with type user = User.t) => {
   let construct = (builder) => {
     Builder.setName(builder, "Charles");
-    Builder.setAge(builder, 120)
+    Builder.setAge(builder, 120);
+    Builder.setPhone(builder, "(123) 456-7890");
+    Builder.setAddress(builder, "123 Fake St.");
   };
 };
 
@@ -76,7 +78,6 @@ module ConcreteUser = {
     age: 120,
     phone: "(123) 456-7890",
     address: "123 Fake St."
-
   };
 
 };
