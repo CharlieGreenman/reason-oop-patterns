@@ -72,7 +72,11 @@ module ConcreteUser = {
     mutable address: string
   };
   let create = (~name:string, ~age:int, ~phone:string, ~address:string) => {
-    name: "asd"
+    name: "fake name",
+    age: 120,
+    phone: "(123) 456-7890",
+    address: "123 Fake St."
+
   };
 
 };
