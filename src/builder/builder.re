@@ -29,6 +29,12 @@ module BuilderPattern = (User: User) => {
     mutable phone: string,
     mutable address: string
   };
+  type user = {
+    mutable name: string,
+    mutable age: int,
+    mutable phone: string,
+    mutable address: string
+  };
 
   let setName = (builder, name) => builder.name = name;
   let getName = (builder) => builder.name;
@@ -60,7 +66,10 @@ module ConcreteUser = {
   let phone:string = "(123) 456-7890";
   let address:string = "123 Fake St.";
   type t = {
-    name:string
+    mutable name: string,
+    mutable age: int,
+    mutable phone: string,
+    mutable address: string
   };
   let create = (~name:string, ~age:int, ~phone:string, ~address:string) => {
     name: "asd"
