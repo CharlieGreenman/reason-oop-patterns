@@ -15,11 +15,11 @@ module type UserBuilder = {
   let setName: (t,string) => unit;
   let getName: t => string;
   let setAge: (t, int) => unit;
-  let getAge: t => unit;
+  let getAge: t => int;
   let setPhone: (t, string) => unit;
-  let getPhone: t => unit;
+  let getPhone: t => string;
   let setAddress: (t, string) => unit;
-  let getAddress: t => unit;
+  let getAddress: t => string;
 };
 
 module BuilderPattern = (User: User) => {
@@ -29,12 +29,7 @@ module BuilderPattern = (User: User) => {
     mutable phone: string,
     mutable address: string
   };
-  type user = {
-    mutable name: string,
-    mutable age: int,
-    mutable phone: string,
-    mutable address: string
-  };
+  type user = User.t;
 
   let setName = (builder, name) => builder.name = name;
   let getName = (builder) => builder.name;
