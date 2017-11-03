@@ -81,5 +81,11 @@ module MyBuilder = BuilderPattern(ConcreteUser);
 
 module DisplayName = Director(ConcreteUser, MyBuilder);
 
+let builder = DisplayName.construct({
+  name: "Henry",
+  age: 200,
+  phone: "words words",
+  address: "address address"
+});
 
-/* Js.log(BuilderPattern.getName); */
+/* Js.log(MyBuilder.getName(builder)); */
