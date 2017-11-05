@@ -54,6 +54,11 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
     Builder.setAge(builder, 120);
     Builder.setPhone(builder, "(123) 456-7890");
     Builder.setAddress(builder, "123 Fake St.");
+
+    Js.log(Builder.getName(builder));
+    Js.log(Builder.getAge(builder));
+    Js.log(Builder.getPhone(builder));
+    Js.log(Builder.getAddress(builder));
   };
 };
 
@@ -82,7 +87,7 @@ module MyBuilder = BuilderPattern(ConcreteUser);
 
 module DisplayName = Director(ConcreteUser, MyBuilder);
 
-let builder = DisplayName.construct({
+DisplayName.construct({
   name: "Henry",
   age: 200,
   phone: "words words",
