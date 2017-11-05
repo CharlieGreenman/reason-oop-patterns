@@ -58,21 +58,22 @@ module Director = (User: User, Builder: UserBuilder with type user = User.t) => 
 };
 
 module ConcreteUser = {
-  let name:string = "Charles";
-  let age:int = 120;
-  let phone:string = "(123) 456-7890";
-  let address:string = "123 Fake St.";
   type t = {
     mutable name: string,
     mutable age: int,
     mutable phone: string,
     mutable address: string
   };
+  let name:string = "Charles";
+  let age:int = 120;
+  let phone:string = "(123) 456-7890";
+  let address:string = "123 Fake St.";
+
   let create = (~name:string, ~age:int, ~phone:string, ~address:string) => {
-    name: "fake name",
-    age: 120,
-    phone: "(123) 456-7890",
-    address: "123 Fake St."
+    name: name,
+    age: age,
+    phone: phone,
+    address: address
   };
 
 };
@@ -87,5 +88,3 @@ let builder = DisplayName.construct({
   phone: "words words",
   address: "address address"
 });
-
-/* Js.log(MyBuilder.getName(builder)); */
