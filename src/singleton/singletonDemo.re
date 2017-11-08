@@ -1,6 +1,6 @@
-let exampleOne = Singleton.SingletonExampleOne.fivePlusFive;
+let exampleOne = Singleton.fivePlusFive;
 
-let exampleTwo = SingletonCopy.SingletonExampleOne.fivePlusFive;
+let exampleTwo = SingletonCopy.fivePlusFive;
 
 Js.log(exampleOne);
 
