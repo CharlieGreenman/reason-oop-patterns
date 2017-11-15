@@ -8,3 +8,7 @@ class macWindowSize (width:int) = {
   inherit class screenSize;
   pub windowWidth = () => width;
 };
+
+class windowWidgetAdaptor = {
+  as _;
+}
