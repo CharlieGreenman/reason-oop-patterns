@@ -8,7 +8,11 @@ I know that I personally had trouble understanding it. A couple of questions I h
 2. "... so that the two can vary", what two are we talking about? Are we just talking
 about the abstraction and the implementation?
   * If so what does the bridge pattern accomplish, and why even choose the name bridge in the first place?
-3.    
+
+##### Way of Explaining the bridge pattern in English.
+Think of the bridge pattern as the item(Item A) being changed, and the item(Item B A.K.A Implementor) changing the item(Item B) being changed.
+
+If we were to try and create a way so that we can create a base for both, and re-create the objects with differences here and there, how would we do it?
 
 ##### What problems can the Bridge design pattern solve?
 
