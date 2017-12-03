@@ -1,13 +1,20 @@
-type abstractProductA = {.
-   doorWidth: int,
-   doorHeight: int,
-   doorColor: string
+type deviceSettings = {.
+   deviceState: int,
+   maxSetting: int,
+   volumeLevel: int
  };
 
-class virtual abstraction = {
-  pub virtual callImplementor: unit;
+class virtual entertainmentDeviceVirtual = {
+  pub virtual buttonFivePressed: unit;
+  pub virtual buttonSixPressed: unit;
+  pub virtual deviceFeedback: unit;
+  pub virtual buttonSevenPressed: unit;
+  pub virtual buttonEightPressed: unit;
 };
 
-class virtual door = {
-
+class entertainmentDevice = {
+  inherit class entertainmentDeviceVirtual;
+  pub deviceFeedback () => {
+    Js.log("helllo");
+  }
 };
