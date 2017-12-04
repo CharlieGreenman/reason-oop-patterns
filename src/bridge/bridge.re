@@ -10,10 +10,11 @@ class virtual entertainmentDeviceVirtual = {
 
   pub virtual buttonFivePressed: unit;
   pub virtual buttonSixPressed: unit;
-  pub device_feedback = (~start=?, ~stop=?, f) => {
-    if (self#contains(ev.mouse_x, ev.mouse_y)) {
+  pub device_feedback = () => {
+    if(self#deviceState > self#maxSetting || self#deviceState < 0) {
 
     }
+
   };
 
   pub virtual buttonSevenPressed: unit;
