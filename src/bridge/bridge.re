@@ -20,4 +20,5 @@ class virtual entertainmentDeviceVirtual = {
 
 class entertainmentDevice = {
   inherit class entertainmentDeviceVirtual;
+  pub volumeLevel = 0;
 };
