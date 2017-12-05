@@ -12,7 +12,7 @@ class virtual entertainmentDeviceVirtual = {
   pub virtual buttonSixPressed: unit;
   pub device_feedback = () => {
     if(self#deviceState > self#maxSetting || self#deviceState < 0) {
-
+      Js.log("works");
     }
 
   };
