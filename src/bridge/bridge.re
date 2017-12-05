@@ -3,7 +3,6 @@ class virtual entertainmentDeviceVirtual = {
   pub virtual volumeLevel: int;
   pub virtual deviceState: int;
   pub virtual maxSetting: int;
-  pub virtual maxSetting: int;
 
   pub virtual buttonFivePressed: unit;
   pub virtual buttonSixPressed: unit;
@@ -22,5 +21,10 @@ class virtual entertainmentDeviceVirtual = {
 
 class entertainmentDevice = {
   inherit class entertainmentDeviceVirtual;
+  pub tVDevice = (newDeviceState:int, newMaxSetting:int) => {
+    self#deviceState = newDeviceState;
+    self#maxSetting = newMaxSetting;
+  };
+
   pub volumeLevel = 0;
 };
