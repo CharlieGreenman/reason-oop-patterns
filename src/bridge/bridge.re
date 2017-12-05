@@ -1,9 +1,6 @@
-type deviceSettings = {.
-   volumeLevel: int
- };
-
 class virtual entertainmentDeviceVirtual = {
   as self;
+  pub virtual volumeLevel: int;
   pub virtual deviceState: int;
   pub virtual maxSetting: int;
   pub virtual maxSetting: int;
@@ -14,10 +11,10 @@ class virtual entertainmentDeviceVirtual = {
     if(self#deviceState > self#maxSetting || self#deviceState < 0) {
       Js.log("works");
     }
-
   };
-
-  pub virtual buttonSevenPressed: unit;
+  pub buttonSevenPressed = () => {
+    self#volumeLevel + 1;
+  };
   pub virtual buttonEightPressed: unit;
 };
 
