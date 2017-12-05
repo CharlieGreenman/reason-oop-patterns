@@ -15,7 +15,9 @@ class virtual entertainmentDeviceVirtual = {
   pub buttonSevenPressed = () => {
     self#volumeLevel + 1;
   };
-  pub virtual buttonEightPressed: unit;
+  pub buttonEightPressed = () => {
+    self#volumeLevel - 1;
+  };
 };
 
 class entertainmentDevice = {
