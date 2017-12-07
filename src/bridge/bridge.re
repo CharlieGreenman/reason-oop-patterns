@@ -1,8 +1,8 @@
 class virtual entertainmentDeviceVirtual = {
   as self;
-  pub virtual volumeLevel: int;
-  pub virtual deviceState: int;
-  pub virtual maxSetting: int;
+  val virtual volumeLevel: int;
+  val virtual deviceState: int;
+  val virtual maxSetting: int;
 
   pub virtual buttonFivePressed: unit;
   pub virtual buttonSixPressed: unit;
@@ -12,7 +12,7 @@ class virtual entertainmentDeviceVirtual = {
     }
   };
   pub buttonSevenPressed = () => {
-    self#volumeLevel + 1;
+    self#volumeLevel + 1;1
   };
   pub buttonEightPressed = () => {
     self#volumeLevel - 1;
@@ -21,10 +21,10 @@ class virtual entertainmentDeviceVirtual = {
 
 class entertainmentDevice = {
   inherit class entertainmentDeviceVirtual;
-  pub tVDevice = (newDeviceState:int, newMaxSetting:int) => {
+  /* pub tVDevice = (newDeviceState:int, newMaxSetting:int) => {
     self#deviceState = newDeviceState;
     self#maxSetting = newMaxSetting;
-  };
+  }; */
 
-  pub volumeLevel = 0;
+  val volumeLevel = 0;
 };
