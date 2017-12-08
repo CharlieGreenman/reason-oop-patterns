@@ -22,11 +22,18 @@ class virtual entertainmentDeviceVirtual = {
 class entertainmentDevice = {
   inherit class entertainmentDeviceVirtual;
   pub tVDevice(newDeviceState: int, newMaxSetting: int) {
-      val deviceState = newDeviceState;
-      val maxSetting = newMaxSetting;
+    val deviceState = newDeviceState;
+    val maxSetting = newMaxSetting;
+  };
+  pub buttonFivePressed() {
+    Js.log("Channel Down");
+    deviceState + 1;
   };
 
-
+  pub buttonSixPressed() {
+    Js.log("Channel Up");
+    deviceState - 1;
+  };
   /* pub tVDevice = (newDeviceState:int, newMaxSetting:int) => {
     self#deviceState = newDeviceState;
     self#maxSetting = newMaxSetting;
